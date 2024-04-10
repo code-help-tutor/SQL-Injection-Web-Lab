@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>EvanAuth</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <h1>
+        Reset password for {{ username }}
+    </h1>
+    <form action="/reset" method="POST">
+        <label for="curr-password">Current Password: <input type="password" id="curr-password" name="curr-password">
+        </label><br>
+        <label for="new-password">New Password: <input type="password" id="new-password" name="new-password">
+        </label><br>
+        <input type="hidden" id="reset-id" name="reset-id" value={{ reset_id }} />
+        <input type="submit">
+    </form>
+</body>
+
+</html>

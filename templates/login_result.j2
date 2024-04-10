@@ -1,0 +1,16 @@
+<html>
+
+<head>
+    <title>EvanAuth</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <h1>
+        {% if success %} Successful {% else %} Failed {% endif %} login for {{ username }}
+    </h1>
+    <a href="/">Return Home</a>
+    <br />
+</body>
+
+</html>
